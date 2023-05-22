@@ -1,0 +1,7 @@
+/client-side/node_modules
+/client-side/.angular
+/client-side/.vscode
+/server-side/node_modules/
+/server-side/y/
+/server-side/.env
+/server-side/public/
