@@ -1,0 +1,129 @@
+crad-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100px;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.d-flex {
+    margin-top: 70px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.item h6 {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: medium;
+}
+
+.item img {
+    width: 50px;
+}
+
+.item a:hover,
+.item:hover,
+.item h6 a:hover {
+    color: #0000ff;
+    text-decoration: #0000ff;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card {
+    padding: 15px;
+    margin: 45px;
+    border: none;
+}
+
+.card img {
+    width: auto;
+    height: 200px;
+    gap: 25px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.08);
+}
+
+.img-fluid {
+    height: 200px;
+    width: 200px;
+}
+
+
+/* Responsiveness */
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+    .container {
+        margin-top: 160px;
+    }
+    .container.container-fluid {
+        max-width: 70%;
+        height: 70%;
+    }
+    .item,
+    .item img {
+        margin-right: 5px;
+        max-width: 55%;
+    }
+    .item h6 {
+        display: none;
+    }
+    .row {
+        margin-top: -150px;
+        justify-content: center;
+    }
+    .card {
+        width: 70%;
+        height: 50%;
+    }
+    .card h5,
+    .card p {
+        text-align: center;
+    }
+    .img-fluid {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .item {
+        margin-right: 10px;
+    }
+    .card {
+        padding: 10px;
+        margin: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container-fluid {
+        width: 750px
+    }
+    .item {
+        margin-right: 10px;
+    }
+    .card {
+        padding: 10px;
+        margin: 20px;
+        width: 300px;
+    }
+}

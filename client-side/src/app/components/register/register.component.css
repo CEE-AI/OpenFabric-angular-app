@@ -1,0 +1,46 @@
+.page-header {
+    margin-top: 100px;
+}
+
+.btn.btn-primary {
+    margin: 20px 0px;
+    padding: 8px 20px;
+}
+
+.form-group {
+    margin: 20px 0px;
+    width: 90%;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+    body {
+        text-align: center;
+        /* width: 750px; */
+        font-size: 0.2rem;
+        margin-top: 70px;
+    }
+    .container {
+        margin-top: 160px;
+    }
+    .btn.btn-primary {
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin: 10px 0px;
+    }
+    .form-group {
+        margin: 20px 10px;
+    }
+    .text-muted {
+        margin-left: 25px;
+    }
+    .form-group input {
+        width: 90%;
+        margin-left: 35px;
+        text-align: center;
+    }
+    .container {
+        text-align: center;
+        margin-left: 50px;
+    }
+}

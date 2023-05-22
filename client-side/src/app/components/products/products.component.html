@@ -1,0 +1,48 @@
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+                <h6>All products</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('laptops')">
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100" alt="">
+                <h6>Laptops</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('smartphones')">
+                <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/new-navi/reno6-pro-5g.png.thumb.webp" alt="">
+                <h6>Phones</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('grocery')">
+                <img style="width: 70px; margin-top: 5px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj52EVTxh3A-4w2V8G21PP2m7k1-OqgrYfFg&usqp=CAU" alt="">
+                <h6>Home</h6>
+            </a>
+        </div>
+        <div class="item">
+            <a (click)="filter('fragrances')">
+                <img style="width: 70px; margin-top: 5px;" src="https://img.freepik.com/premium-photo/perfume-white-background_404043-1561.jpg?w=2000" alt="">
+                <h6>Beauty</h6>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="container container-fluid">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3 col-xs-6">
+                <img class="img.fluid" style="max-width:100%; max-height: 100%;" src="{{item.thumbnail}}" alt="products">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price: </strong>${{item.price}}</p>
+                <button class="btn btn-info" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

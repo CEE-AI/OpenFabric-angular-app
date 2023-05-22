@@ -1,0 +1,46 @@
+<div class="container-sm navbar-container">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">&nbsp; &nbsp; &nbsp; My Angular App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" (click)="toggledCollapsed()">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault" [ngClass]="{'collapse': collapsed, 'navbar-collapse':true}">
+            <ul class="nav navbar-nav navbar-left flex-row">
+                <li class="nav-item " [routerLinkActive]="[ 'active'] " [routerLinkActiveOptions]="{exact:true} ">
+                    <a class="nav-link " [routerLink]="[ '/'] ">Home <span></span></a>
+                </li>
+            </ul>
+
+            <div class="form-group navbar-nav ms-auto flex-row">
+                <input type="text " class="form-control " [(ngModel)]="searchTerm " (keyup)="search($event) " placeholder="search products ">
+            </div>
+            <span class="fas fa-search search-icon "></span>
+            <button *ngIf="isLoggedIn " routerLink="/cart" class="btn btn-dark navbar-right ">
+                <i style="font-size:18px; " class="fas fa-cart-plus "></i>
+                <div style="font-size:10px; " class="badge bg-info ">{{totalItem}}</div>
+            </button>
+            <button *ngIf="!isLoggedIn " [routerLink]="['/login'] " class="btn btn-dark navbar-right ">
+                <i style="font-size:18px; " class="fas fa-cart-plus "></i>
+                <div style="font-size:10px; " class="badge bg-info ">{{totalItem}}</div>
+            </button>
+            <ul class="navbar-nav ms-auto flex-row">
+                <li class="nav-item " *ngIf="isLoggedIn " [routerLinkActive]=" [ 'active'] " [routerLinkActiveOptions]="{exact:true} ">
+                    <a class="nav-link dash " [routerLink]="[ '/dashboard'] ">Dashboard</a>
+                </li>
+                <li class="nav-item " *ngIf="isLoggedIn " [routerLinkActive]="[ 'active'] " [routerLinkActiveOptions]="{exact:true} ">
+                    <a class="nav-link dash " [routerLink]="[ '/profile'] ">Profile</a>
+                </li>
+                <li class="nav-item " *ngIf="!isLoggedIn " [routerLinkActive]=" [ 'active'] " [routerLinkActiveOptions]="{exact:true} ">
+                    <a class="nav-link dash-2" [routerLink]="[ '/login'] ">Login </a>
+                </li>
+                <li class="nav-item " *ngIf="!isLoggedIn " [routerLinkActive]="[ 'active'] " [routerLinkActiveOptions]="{exact:true} ">
+                    <a class="nav-link dash-2" [routerLink]="[ '/register'] ">Register &nbsp; &nbsp; &nbsp;</a>
+                </li>
+                <li class="nav-item " *ngIf="isLoggedIn ">
+                    <a class="nav-link dash " [routerLink]=" [ '/login'] " (click)="onLogoutClick() " href="# ">Logout &nbsp; &nbsp; &nbsp;</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</div>

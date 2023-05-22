@@ -1,0 +1,47 @@
+.fluid-container {
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group input {
+    width: 80%;
+    margin: 15px 0px;
+}
+
+.btn.btn-primary {
+    margin: 20px 0px;
+    padding: 8px 20px;
+}
+
+.me {
+    margin-top: 5px;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+    body {
+        text-align: center;
+        width: 750px;
+        font-size: 0.2rem;
+        margin-top: 70px;
+    }
+    .btn.btn-primary {
+        padding: 8px;
+        font-size: 12px;
+        border-radius: 5px;
+        margin: 10px 0px;
+    }
+    .form-group {
+        margin: 20px 0px;
+    }
+    .form-group input {
+        width: 60%;
+        margin-left: 100px;
+        text-align: center;
+    }
+    .container {
+        text-align: center;
+    }
+}
