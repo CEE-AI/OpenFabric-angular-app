@@ -17,7 +17,7 @@ interface CustomError extends Error {
 
 const app = express();
 
-const port = 8701;
+// const port = 8701;
 
 app.use(cors({
     credentials: true,
@@ -69,6 +69,8 @@ app.get('*', (req, res) => {
 // Server Configuration
 
 const server = http.createServer(app);
+
+const port = process.env.PORT || 8080
 
 app.get('/', (req:express.Request, res:express.Response) => res.send("OpenFabric"))
 server.listen(port,()=>{ console.log('server runing on port '+ port)})
