@@ -1,4 +1,4 @@
-# Fullstack Junior Developer (Intern) Test
+# Fullstack Junior Developer
 
 Welcome! and thank you for applying!
 
