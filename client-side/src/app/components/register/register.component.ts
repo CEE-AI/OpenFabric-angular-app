@@ -45,8 +45,8 @@ export class RegisterComponent {
     }
 
     // Registration
-    this.authService.registerUser(user).subscribe(
-      (data) => {
+    this.authService.registerUser(user).subscribe({
+      next: (data) => {
         if (data) {
           Swal.fire('Success', 'Registration successful, redirecting to login page', 'success');
           this.router.navigate(['/login']);
@@ -54,10 +54,10 @@ export class RegisterComponent {
           Swal.fire('Error', 'Registration failed', 'error');
         }
       },
-      (error) => {
+      error: (error) => {
         Swal.fire('Error', 'Registration failed', 'error');
       }
-    );
+    });
     return undefined
   } 
    

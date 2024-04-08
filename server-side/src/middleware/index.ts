@@ -1,5 +1,5 @@
 import express from 'express';
-
+import { get } from 'lodash';
 export const isOwner = async ( req: express.Request, res: express.Response, next: express.NextFunction ) =>{
     try{
         const { id } = req.params;

@@ -4,7 +4,7 @@
         "baseUrl": "src",
         "noImplicitAny": true,
         "strictPropertyInitialization": false,
-        "moduleResolution": "node",
+        "moduleResolution": "NodeNext",
         "outDir": "dist",
         "sourceMap": true
     },

@@ -40,6 +40,11 @@ app.use('/users', usersRouter);
 app.use('/', router())
 app.use('/products', productsRouter)
 
+// Server Configuration
+const server = http.createServer(app);
+
+app.get('/', (req:express.Request, res:express.Response) => res.send("<h1>OpenFabric Server</h1>"))
+server.listen(port,()=>{ console.log('server runing on port '+ port)})
 // Error customization
 
 app.use((req, res, next)=>{
@@ -65,13 +70,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
-
-// Server Configuration
-
-const server = http.createServer(app);
-
-app.get('/', (req:express.Request, res:express.Response) => res.send("OpenFabric"))
-server.listen(port,()=>{ console.log('server runing on port '+ port)})
 
 // Mongo Database COnfiguration
 
