@@ -82,9 +82,10 @@ const usersRouter = express.Router();
 			return res.sendStatus(500)
 		}
 	})
-usersRouter.get("/profile", authenticateJwt,(
-	req: express.Request, 
-	res: express.Response, 
-	next: express.NextFunction)=> res.send({user:req.user}))
+usersRouter.get("/profile", authenticateJwt,function (req: express.Request,
+		res: express.Response,
+		next: express.NextFunction) {
+		return res.send({ user: req.user });
+	})
 
 export default usersRouter
